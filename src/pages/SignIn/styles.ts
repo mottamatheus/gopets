@@ -15,7 +15,7 @@ export const Content = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    max-width: 60rem;
+    max-width: 50rem;
 
     form {
       margin: 8rem 0;
