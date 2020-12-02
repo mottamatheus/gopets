@@ -8,8 +8,12 @@ export default createGlobalStyle`
       outline: 0;
     }
 
+    html {
+     --color-primary: #42213D;
+    }
+
     body {
-      background: #42213D;
+      background: var(--color-primary);
       color: #fff;
       font-size: 62.5%;
     }
