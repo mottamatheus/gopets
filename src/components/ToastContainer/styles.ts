@@ -32,7 +32,7 @@ export const Toast = styled.div<ToastProps>`
   display: flex;
   width: 36rem;
   position: relative;
-  padding: 16px  30px 16px 16px;
+  padding: 16px 30px 16px 16px;
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
@@ -40,7 +40,7 @@ export const Toast = styled.div<ToastProps>`
     margin-top: 12px;
   }
 
-  ${(props) => toastTypeVariations[props.type || 'info']}
+  ${props => toastTypeVariations[props.type || 'info']}
 
   > svg {
     margin: 4px 12px 0 0;
@@ -67,13 +67,13 @@ export const Toast = styled.div<ToastProps>`
     color: inherit;
   }
 
-  ${(props) => !props.hasDescription && css`
-    align-items: center;
+  ${props =>
+    !props.hasDescription &&
+    css`
+      align-items: center;
 
-    svg {
-      margin-top: 0;
-    }
-
-
-  `}
+      svg {
+        margin-top: 0;
+      }
+    `}
 `;

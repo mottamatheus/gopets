@@ -28,8 +28,6 @@ export const Container = styled.div`
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-
     }
   }
-
 `;

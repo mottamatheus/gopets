@@ -10,26 +10,19 @@ interface ToastContextData {
 const ToastContext = createContext<ToastContextData>({} as ToastContextData);
 
 const ToastProvider: React.FC = ({ children }) => {
-  const addToast = useCallback(
-    () => {
-      console.log('addToast');
-    },
-    [],
-  );
+  const addToast = useCallback(() => {
+    console.log('addToast');
+  }, []);
 
-  const removeToast = useCallback(
-    () => {
-      console.log('addToast');
-    },
-    [],
-  );
+  const removeToast = useCallback(() => {
+    console.log('addToast');
+  }, []);
 
   return (
     <ToastContext.Provider value={{ addToast, removeToast }}>
       {children}
       <ToastContainer />
     </ToastContext.Provider>
-
   );
 };
 
