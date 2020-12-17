@@ -6,6 +6,8 @@ export default createGlobalStyle`
   --text-primary: #303033;
   --color-primary: #fff5ee;
   --color-secondary: #f9665f;
+  --card-primary: #f2e2d5;
+  --card-secondary: #ebd3c1;
 }
     * {
       margin: 0;
