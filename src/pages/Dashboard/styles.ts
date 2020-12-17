@@ -58,7 +58,7 @@ export const Profile = styled.div`
 
 export const Content = styled.main`
   max-width: 1200px;
-  margin: 64px 5vw;
+  margin: 64px auto;
   display: flex;
 `;
 export const Schedule = styled.div`
