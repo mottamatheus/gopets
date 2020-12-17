@@ -56,7 +56,7 @@ export const Content = styled.div`
         align-items: center;
 
         svg {
-          margin-right: 1rem;
+          margin-right: 10px;
         }
 
       &:hover {

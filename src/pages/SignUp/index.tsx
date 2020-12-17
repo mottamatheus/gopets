@@ -1,7 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import {
-  FiArrowLeft, FiMail, FiUser, FiLock,
-} from 'react-icons/fi';
+import { FiArrowLeft, FiMail, FiUser, FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
@@ -20,13 +18,14 @@ const SignUp: React.FC = () => {
       formRef.current?.setErrors({});
       const schema = Yup.object().shape({
         name: Yup.string().required('Nome obrigatório'),
-        email: Yup.string().required('E-mail obrigatório').email('Digite um e-mail válido'),
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Digite um e-mail válido'),
         password: Yup.string().min(6, 'Mínimo de 6 dígitos'),
       });
 
       await schema.validate(data, {
         abortEarly: false,
-
       });
     } catch (err) {
       const errors = getValidationErrors(err);
@@ -42,7 +41,12 @@ const SignUp: React.FC = () => {
           <h1>Faça seu cadastro</h1>
           <Input name="name" icon={FiUser} placeholder="Nome" />
           <Input name="email" icon={FiMail} placeholder="E-mail" />
-          <Input name="password" icon={FiLock} type="password" placeholder="Senha" />
+          <Input
+            name="password"
+            icon={FiLock}
+            type="password"
+            placeholder="Senha"
+          />
           <Button type="submit">Cadastrar</Button>
         </Form>
         <a href="login">

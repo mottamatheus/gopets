@@ -5,12 +5,12 @@ export const Container = styled.div`
 
   span {
     width: 15rem;
-    color: #312e38;
-    background: #BD4089;
+    color: var(--color-primary);
+    background: var(--color-secondary);
     padding: 0.8rem;
     border-radius: 4px;
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 400;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s;
@@ -23,7 +23,7 @@ export const Container = styled.div`
       content: '';
       position: absolute;
       border-style: solid;
-      border-color: #BD4089 transparent;
+      border-color: var(--color-secondary) transparent;
       border-width: 6px 6px 0 6px;
       top: 100%;
       left: 50%;
