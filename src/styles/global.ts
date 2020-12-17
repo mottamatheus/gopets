@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+
+:root {
+  --text-primary: #303033;
+  --color-primary: #fff5ee;
+  --color-secondary: #f9665f;
+}
     * {
       margin: 0;
       padding: 0;
@@ -8,18 +14,14 @@ export default createGlobalStyle`
       outline: 0;
     }
 
-    html {
-     --color-primary: #42213D;
-    }
-
     body {
       background: var(--color-primary);
-      color: #fff;
+      color: var(--text-primary);
       font-size: 62.5%;
     }
 
     body, input, button {
-      font-family: 'Roboto Slab', sans-serif;
+      font-family: 'Fira Sans', sans-serif;
       font-size: 1rem;
     }
 
