@@ -9,8 +9,8 @@ const App: React.FC = () => (
   <>
     <GlobalStyles />
     <AppProvider>
-      <Dashboard />
-      {/* <SignIn /> */}
+      <SignIn />
+      {/* <Dashboard /> */}
     </AppProvider>
   </>
 );

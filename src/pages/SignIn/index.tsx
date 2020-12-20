@@ -26,10 +26,11 @@ const SignIn: React.FC = () => {
     async (data: SignInFormData) => {
       try {
         formRef.current?.setErrors({});
+
         const schema = Yup.object().shape({
           email: Yup.string()
-            .required('E-mail obrigatório')
-            .email('Digite um e-mail válido'),
+            .email('Digite um e-mail válido')
+            .required('E-mail obrigatório'),
           password: Yup.string().required('Senha obrigatória'),
         });
 
@@ -45,11 +46,14 @@ const SignIn: React.FC = () => {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
           formRef.current?.setErrors(errors);
-
-          return;
         }
 
-        addToast();
+        addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description:
+            'Ocorreu um erro ao fazer login. Verifique suas credenciais.',
+        });
       }
     },
     [signIn, addToast],
