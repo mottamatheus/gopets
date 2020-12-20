@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { ToastMessage } from '../../hooks/toast';
 import { Container } from './styles';
 import Toast from './Toast';
@@ -10,9 +11,11 @@ interface ToastContainerProps {
 const ToastContainer: React.FC<ToastContainerProps> = ({ messages }) => {
   return (
     <Container>
-      {messages.map(message => (
-        <Toast key={message.id} message={message} />
-      ))}
+      <AnimatePresence>
+        {messages.map(message => (
+          <Toast key={message.id} message={message} />
+        ))}
+      </AnimatePresence>
     </Container>
   );
 };

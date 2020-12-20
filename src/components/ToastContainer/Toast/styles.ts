@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 interface ContainerProps {
   type?: 'success' | 'error' | 'info';
@@ -20,7 +21,7 @@ const toastTypeVariations = {
   `,
 };
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled(motion.div)<ContainerProps>`
   display: flex;
   width: 36rem;
   position: relative;
