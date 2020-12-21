@@ -33,9 +33,9 @@ const Toast: React.FC<ToastProps> = ({ message }) => {
 
   return (
     <Container
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ x: 700, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 700, opacity: 0 }}
       type={message.type}
       hasDescription={!!message.description}
     >

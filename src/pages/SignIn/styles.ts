@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
+import { motion } from 'framer-motion';
 import BackgroundImg from '../../assets/background.jpg';
 
 export const Container = styled.div`
@@ -44,6 +45,19 @@ export const Content = styled.div`
       }
     }
   }
+`;
+
+export const Background = styled.div`
+  flex: 1;
+  background: url(${BackgroundImg}) no-repeat center;
+  background-size: cover;
+`;
+
+export const AnimationContainer = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   > a {
     color: var(--color-secondary);
@@ -62,10 +76,4 @@ export const Content = styled.div`
       color: ${shade(0.2, '#f9665f')};
     }
   }
-`;
-
-export const Background = styled.div`
-  flex: 1;
-  background: url(${BackgroundImg}) no-repeat center;
-  background-size: cover;
 `;
