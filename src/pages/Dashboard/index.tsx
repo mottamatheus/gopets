@@ -45,7 +45,7 @@ const Dashboard: React.FC = () => {
             />
             <div>
               <span>Bem-vindo,</span>
-              <strong>{user.name} | PetShop Águia</strong>
+              <strong>{user.name} | PetShop - Águia Azul</strong>
             </div>
           </Profile>
           <button onClick={signOut} type="button">
